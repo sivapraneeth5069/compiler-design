@@ -1,0 +1,14 @@
+%{
+%}
+%%
+((0[1-9])|([1-2][0-9])|(3[0-1]))\/((0[1-9])|(1[1-2]))\/(19[0-9]{2}|2[0-9]{3}) {printf("It is valid DOB");}
+.+ {printf("It is invalid DOB");}
+%%
+int yywrap()
+{
+}
+int main()
+{
+printf("Enter the DOB:");
+yylex();
+}
